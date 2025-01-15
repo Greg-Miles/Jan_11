@@ -104,8 +104,13 @@ class ImageCompressor:
         else:
             print("Указанный путь не существует")
 
-
-if __name__ == "__main__":
+def main():
     user_input: str = input("Введите путь к файлу или директории: ")
     compressor = ImageCompressor()
     compressor(user_input)
+    print(compressor.quality)
+    compressor.quality = 100
+    print(compressor.quality)
+
+if __name__ == "__main__":
+    main()
